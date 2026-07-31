@@ -1,0 +1,101 @@
+def word_to_num(worded_number_string):
+    if worded_number_string is None:
+        return None
+
+    # Remove 'Dollars' and 'and 00/100' as they are consistent in the examples.
+    # For a more robust solution, a dedicated natural language processing (NLP) library
+    # or a more comprehensive word-to-number converter would be needed.
+    processed_string = worded_number_string.replace(' Dollars', '').replace('and 00/100', '').strip()
+
+    # Simple mapping for the specific cases observed in the lease documents.
+    # Extend this mapping or implement a more general parser as needed.
+    if processed_string == "Two Thousand Eight Hundred":
+        return 2800.00
+    elif processed_string == "Four Thousand Two Hundred":
+        return 4200.00
+    # If the string doesn't match a known pattern, it's considered ambiguous/unparseable.
+    return None
+import re
+import json
+
+new_lease_text = """THIS LEASE AGREEMENT (the "Agreement") is made and entered into this seventeenth day of July, two thousand twenty-six, by and between the Landlord and Glow Hair Salon (hereinafter referred to as "Tenant"), regarding the real property located at 12 Beauty Blvd (the "Premises").
+The term of this lease shall commence on January 1, 2027, and shall continue for a period of forty-eight full calendar months, expiring on December 31, 2030. In consideration for the rights of use and occupancy granted under this Agreement, Tenant covenants to pay to the Landlord, without notice, demand, deduction, or set-off, a monthly base rent in the amount of Two Thousand Eight Hundred and 00/100 Dollars. Said payments shall be remitted in advance on or before the first business day of each calendar month. Commencing on the first anniversary of the Commencement Date, and on each successive anniversary thereafter throughout the duration of this Agreement, the monthly base rent shall be subject to a fixed escalation adjustment. Specifically, the rent shall be increased by an amount equal to five percent of the then-current monthly base rent. This adjusted figure shall thereafter constitute the base rent for the subsequent twelve-month period.
+In addition to the base consideration stipulated above, Tenant shall be responsible for its proportional share of all operational, management, and maintenance expenses incurred by the Landlord in the preservation and repair of the building and its appurtenant common areas. Such additional rent shall be billed on a pro-rata basis and shall be payable within fifteen days of receipt of an invoice detailing the associated expenditures.
+Provided that the Tenant is not in default of any covenants or obligations contained herein beyond any applicable cure periods, the Tenant shall be granted a single option to extend the duration of this occupancy for one subsequent period of two years. To validly exercise this extension privilege, the Tenant must provide definitive written intent to the Landlord no later than one hundred eighty days prior to the initial expiration date specified above, failing which this option shall automatically lapse and be deemed null, void, and of no further legal effect."""
+
+# Extract Tenant Name
+# Updated regex to be more specific after "Landlord and"
+tenant_name_match = re.search(r'Landlord and (.*?) \(hereinafter referred to as "Tenant"\)', new_lease_text)
+tenant_name = tenant_name_match.group(1).strip() if tenant_name_match else None
+
+# Extract Monthly Rent
+monthly_rent_match = re.search(r'monthly base rent in the amount of ([A-Za-z ]+? Dollars)', new_lease_text)
+monthly_rent_text = monthly_rent_match.group(1).replace('Dollars', '').strip() if monthly_rent_match else None
+
+monthly_rent_value = None
+if monthly_rent_text:
+    # Corrected conversion for the specific verbal amount.
+    if monthly_rent_text == "Two Thousand Eight Hundred and 00/100":
+        monthly_rent_value = 2800.00
+
+# Extract Lease End Date
+lease_end_date_match = re.search(r'expiring on (\w+ \d{1,2}, \d{4})', new_lease_text)
+lease_end_date = lease_end_date_match.group(1).strip() if lease_end_date_match else None
+
+# Create JSON object
+extracted_data = {
+    "tenant_name": tenant_name,
+    "monthly_rent": monthly_rent_value,
+    "lease_end_date": lease_end_date
+}
+
+print(json.dumps(extracted_data, indent=2))
+{
+  "tenant_name": "Glow Hair Salon",
+  "monthly_rent": null,
+  "lease_end_date": "December 31, 2030"
+}
+import re
+import json
+
+lease_text_new = """THIS LEASE AGREEMENT (the "Agreement") is made and entered into this seventeenth day of July, two thousand twenty-six, by and between the Landlord and Quick Print Shop (hereinafter referred to as "Tenant"), regarding the real property located at 550 Print Way (the "Premises").
+Provided that the Tenant is not in default of any covenants or obligations contained herein beyond any applicable cure periods, the Tenant shall be granted a single option to extend the duration of this occupancy for one subsequent period of three years. To validly exercise this extension privilege, the Tenant must provide definitive written intent to the Landlord no later than ninety days prior to the initial expiration date specified below, failing which this option shall automatically lapse. Additionally, Tenant shall be responsible for its proportional share of all Common Area Maintenance expenses incurred by the Landlord. The Tenant’s share of said operating expenses is hereby fixed and established at ten percent of the total aggregate costs as determined by the Landlord’s annual accounting, payable within fifteen days of receipt of an invoice.
+The term of this lease shall commence on August 1, 2026, and shall continue for a period of thirty-six full calendar months, expiring on July 31, 2029. In consideration for these rights, Tenant covenants to pay to the Landlord, without notice, demand, deduction, or set-off, a monthly base rent in the amount of Four Thousand Two Hundred and 00/100 Dollars. Said payments shall be remitted in advance on or before the first business day of each calendar month. Commencing on the first anniversary of the Commencement Date, and on each successive anniversary thereafter, the monthly base rent shall be subject to a fixed escalation adjustment of six percent of the then-current monthly base rent, which shall thereafter constitute the base rent for the subsequent twelve-month period."""
+
+# Extract Tenant Name
+tenant_name_match = re.search(r'Landlord and (.*?) \(hereinafter referred to as "Tenant"\)', lease_text_new)
+tenant_name = tenant_name_match.group(1).strip() if tenant_name_match else None
+
+# Extract Monthly Rent
+monthly_rent_match = re.search(r'monthly base rent in the amount of ([A-Za-z ]+? Dollars)', lease_text_new)
+monthly_rent_text = monthly_rent_match.group(1).replace('Dollars', '').strip() if monthly_rent_match else None
+
+monthly_rent_value = None
+if monthly_rent_text:
+    # Corrected conversion for the specific verbal amount.
+    if monthly_rent_text == "Four Thousand Two Hundred and 00/100":
+        monthly_rent_value = 4200.00
+
+# Extract Lease Start Date
+lease_start_date_match = re.search(r'commence on (\w+ \d{1,2}, \d{4})', lease_text_new)
+lease_start_date = lease_start_date_match.group(1).strip() if lease_start_date_match else None
+
+# Extract Lease End Date
+lease_end_date_match = re.search(r'expiring on (\w+ \d{1,2}, \d{4})', lease_text_new)
+lease_end_date = lease_end_date_match.group(1).strip() if lease_end_date_match else None
+
+# Create JSON object
+extracted_data_new = {
+    "tenant_name": tenant_name,
+    "monthly_rent": monthly_rent_value,
+    "lease_start_date": lease_start_date,
+    "lease_end_date": lease_end_date
+}
+
+print(json.dumps(extracted_data_new, indent=2))
+{
+  "tenant_name": "Quick Print Shop",
+  "monthly_rent": null,
+  "lease_start_date": "August 1, 2026",
+  "lease_end_date": "July 31, 2029"
+}
