@@ -1,0 +1,10 @@
+{
+  "tenant_name": "Orange Inc.",
+  "property_address": "77 Coolperson Ln",
+  "monthly_rent": 2775.00,
+  "lease_start": null,
+  "lease_end": null,
+  "escalation": "2.5% annually on each anniversary of the Commencement Date",
+  "cam": "8% of total aggregate costs, billed pro-rata, payable within 15 days of invoice",
+  "renewal_option": "None - non-renewable term"
+}

@@ -1,0 +1,10 @@
+{
+  "tenant_name": "Quick Print Shop",
+  "property_address": "550 Print Way",
+  "monthly_rent": 4200.00,
+  "lease_start": "2026-08-01",
+  "lease_end": "2029-07-31",
+  "escalation": "6% annually on each anniversary of the Commencement Date",
+  "cam": "10% of total aggregate costs, payable within 15 days of invoice",
+  "renewal_option": "One 3-year option, written notice required 90 days before expiration"
+}

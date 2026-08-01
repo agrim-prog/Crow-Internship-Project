@@ -1,0 +1,10 @@
+{
+  "tenant_name": "Star Donuts LLC",
+  "property_address": "104 Donut Circle",
+  "monthly_rent": 3500.00,
+  "lease_start": "2026-10-01",
+  "lease_end": "2029-09-30",
+  "escalation": "5% annually on each anniversary of the Commencement Date",
+  "cam": "10% of total aggregate costs, billed pro-rata, payable within 15 days of invoice",
+  "renewal_option": "None - non-renewable term"
+}

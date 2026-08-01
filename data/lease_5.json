@@ -1,0 +1,10 @@
+{
+  "tenant_name": "Apex Tech Lab",
+  "property_address": "909 Innovation Rd",
+  "monthly_rent": 9000.00,
+  "lease_start": "2026-12-01",
+  "lease_end": "2029-11-30",
+  "escalation": "Stepped: +$500/month starting Dec 1 2027, +$500/month more starting Dec 1 2028 (fixed dollar steps, not a percentage)",
+  "cam": "10% of total aggregate costs, payable within 15 days of invoice",
+  "renewal_option": null
+}

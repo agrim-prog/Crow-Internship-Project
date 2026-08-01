@@ -1,0 +1,10 @@
+{
+  "tenant_name": "Glow Hair Salon",
+  "property_address": "12 Beauty Blvd",
+  "monthly_rent": 2800.00,
+  "lease_start": "2027-01-01",
+  "lease_end": "2030-12-31",
+  "escalation": "5% annually on each anniversary of the Commencement Date",
+  "cam": "Proportional share of operational, management, and maintenance expenses, no fixed percentage stated",
+  "renewal_option": "One 2-year option, written notice required 180 days before expiration"
+}
