@@ -1,0 +1,10 @@
+{
+  "tenant_name": "Velvet Bakery Co.",
+  "property_address": "22 Flourmill Row",
+  "monthly_rent": 1900.00,
+  "lease_start": "2027-01-09",
+  "lease_end": "2028-12-31",
+  "escalation": "None - fixed rent for the entire term",
+  "cam": "Addressed in a separate operating agreement not attached - not stated in this document",
+  "renewal_option": "None - no right to extend or renew without a new written agreement"
+}

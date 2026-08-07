@@ -1,0 +1,10 @@
+{
+  "tenant_name": "Bright Toy Store LLC",
+  "property_address": "44 Playdate Ave",
+  "monthly_rent": 1200.00,
+  "lease_start": "2026-06-01",
+  "lease_end": "2029-05-31",
+  "escalation": "None on base rent; plus 4% percentage rent on gross sales over $360,000/year",
+  "cam": "Included in gross lease; common area utilities separately capped at $200/month",
+  "renewal_option": "None - month-to-month holdover only, terminable on 30 days' notice"
+}

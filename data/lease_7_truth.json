@@ -1,0 +1,10 @@
+{
+  "tenant_name": "Marbleton Law Group",
+  "property_address": "615 Courthouse Sq",
+  "monthly_rent": 6100.00,
+  "lease_start": "2026-04-01",
+  "lease_end": "2031-03-31",
+  "escalation": "3% annually on each anniversary of the Commencement Date",
+  "cam": "12% of total aggregate costs, payable within 15 days of invoice",
+  "renewal_option": "Two options: first for 5 years, second (if first exercised) for 3 years; written notice required 120 days before expiration of the then-current term"
+}
