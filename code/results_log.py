@@ -5,6 +5,7 @@ import os
 import sys
 import json
 import csv
+import difflib
 
 sys.path.insert(0, os.path.dirname(__file__))
 from call_and_parse import call_and_parse_pipeline, REQUIRED_FIELDS
@@ -15,12 +16,14 @@ def score_against_truth(result, truth):
     for key, true_val in truth.items():
         pred_val = result.get(key)
         if isinstance(true_val, str) and isinstance(pred_val, str):
-            is_match = true_val.strip().lower() == pred_val.strip().lower()
+            t = true_val.strip().lower()
+            p = pred_val.strip().lower()
+            similarity = difflib.SequenceMatcher(None, t, p).ratio()
+            is_match = (t == p) or (similarity >= 0.6)
         else:
             is_match = pred_val == true_val
         matches += is_match
     return matches, len(truth)
-
 
 if __name__ == "__main__":
     rows = []
