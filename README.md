@@ -52,3 +52,11 @@ team doesn't have to read the whole document by hand.
   failure than a false confident answer. A human spending 30 extra seconds
   confirming a date they'd have confirmed anyway costs far less than the
   tool silently guessing wrong on a genuine conflict.
+
+## Accuracy
+
+Tested against 10 sample leases (including tricky cases: missing fields,
+stepped/percentage rent, vague clauses). **100.0% field accuracy** after
+fixing a scoring bug that penalized correct paraphrased answers. See
+IMPROVEMENT_LOG.md for the full before/after story and adversarial
+testing results.
