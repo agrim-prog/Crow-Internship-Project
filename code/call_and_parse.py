@@ -120,13 +120,17 @@ def call_and_parse_pipeline(raw_lease_text: str):
     parsed_dict comes back None only when we couldn't parse the response at all.
     That's a different thing from a lease where every field just happens to be blank.
     """
-    response = client.messages.create(
-        model=MODEL,
-        max_tokens=2000,
-        temperature=0,
-        system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": build_prompt(raw_lease_text)}],
-    )
+    try:
+        response = client.messages.create(
+            model=MODEL,
+            max_tokens=2000,
+            temperature=0,
+            system=SYSTEM_PROMPT,
+            messages=[{"role": "user", "content": build_prompt(raw_lease_text)}],
+        )
+    except Exception as e:
+        print(f"[Error] API call failed: {e}")
+        return None, [f"API call failed: {e}"]
 
     raw_output = response.content[0].text
 
