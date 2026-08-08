@@ -4,7 +4,7 @@
   "monthly_rent": 5200.00,
   "lease_start": "2026-09-01",
   "lease_end": "2031-08-31",
-  "escalation": "Monthly base rent increases by $300/month on the second anniversary of the Commencement Date, and by an additional $300/month on each anniversary thereafter for the remainder of the term",
-  "cam": "Tenant contributes toward shared building costs, amount determined by Landlord from time to time, consistent with comparable properties - no fixed percentage or dollar figure given",
-"renewal_option": "One 5-year option, written notice required at a commercially reasonable time before expiration - no specific day count given"
+  "escalation": "Monthly base rent increases by $300.00 on the second anniversary of the Commencement Date, and by an additional $300.00 on each anniversary thereafter for the remainder of the term",
+  "cam": "Tenant shall contribute toward shared building costs in a manner and amount to be reasonably determined by the Landlord from time to time, consistent with practices at comparable properties in the vicinity",
+  "renewal_option": "Single option to extend for one additional period of five years, exercisable by written notice given at a commercially reasonable time prior to expiration of the initial term, provided Tenant is not in default"
 }

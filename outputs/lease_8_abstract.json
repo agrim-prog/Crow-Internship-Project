@@ -4,13 +4,13 @@
   "monthly_rent": 1200.0,
   "lease_start": "2026-06-01",
   "lease_end": "2029-05-31",
-  "escalation": "Percentage rent of 4% of Gross Sales exceeding $360,000 annually",
-  "cam": "Included in base rent (gross lease); Tenant reimburses proportionate share of common area utilities capped at $200/month",
-  "renewal_option": "No renewal or extension option; month-to-month after term with 30 days notice",
+  "escalation": "None stated for base rent; percentage rent of 4% on Gross Sales exceeding $360,000 annually",
+  "cam": "Common area costs included in base rent (gross lease); Tenant reimburses proportionate share of common area utilities capped at $200/month",
+  "renewal_option": "No renewal or extension option; month-to-month after term with 30 days' notice",
   "key_provisions": [
-    "Percentage rent reconciled within 30 days following each Lease Year",
-    "Common area utilities reimbursement capped at $200/month",
-    "Month-to-month tenancy permitted after lease term expires"
+    "Percentage rent: 4% of Gross Sales over $360,000 annually, reconciled within 30 days after each Lease Year",
+    "Utility cap: Common area utility reimbursement capped at $200/month",
+    "Post-term occupancy: Month-to-month basis, terminable by either party with 30 days' written notice"
   ],
   "review_flags": {
     "cam_unclear": false,

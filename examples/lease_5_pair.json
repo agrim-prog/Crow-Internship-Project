@@ -6,8 +6,8 @@
     "monthly_rent": 9000.0,
     "lease_start": "2026-12-01",
     "lease_end": "2029-11-30",
-    "escalation": "Monthly rent increases by $500.00 on December 1, 2027 (to $9,500.00) and by an additional $500.00 on December 1, 2028 (to $10,000.00)",
-    "cam": "Tenant responsible for 10% of total Common Area Maintenance expenses; billed pro-rata and payable within 15 days of invoice",
+    "escalation": "Monthly base rent increases by $500.00 on December 1, 2027, and by an additional $500.00 on December 1, 2028",
+    "cam": "Tenant responsible for 10% of total Common Area Maintenance expenses, billed pro-rata, payable within 15 days of invoice",
     "renewal_option": null,
     "key_provisions": [
       "Rent payable in advance on or before first business day of each month",

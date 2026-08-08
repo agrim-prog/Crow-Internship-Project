@@ -7,11 +7,11 @@
     "lease_start": "2026-04-01",
     "lease_end": "2031-03-31",
     "escalation": "3% annual increase on each anniversary of commencement date",
-    "cam": "Tenant pays 12% of total Common Area Maintenance expenses, due within 15 days of invoice",
-    "renewal_option": "Two successive options: first for 5 years, second for 3 years (if first exercised); 120 days written notice required",
+    "cam": "12% of total Common Area Maintenance expenses, payable within 15 days of invoice",
+    "renewal_option": "Two successive options: first for 5 years, second for 3 years (if first exercised); 120 days written notice required; contingent on tenant not being in default",
     "key_provisions": [
-      "Renewal options contingent on tenant not being in default",
-      "60 full calendar month initial term"
+      "Lease term is 60 full calendar months",
+      "Renewal options contingent on tenant not being in default"
     ],
     "review_flags": {
       "cam_unclear": false,

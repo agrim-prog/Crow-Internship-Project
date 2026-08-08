@@ -1,10 +1,10 @@
 sample_name,all_fields_present,fields_correct,notes
 lease_1,yes,8/8,clean
-lease_10,yes,6/8,clean
-lease_2,yes,7/8,clean
+lease_10,yes,8/8,clean
+lease_2,yes,8/8,clean
 lease_3,yes,8/8,clean
 lease_4,yes,8/8,clean
-lease_5,yes,7/8,clean
+lease_5,yes,8/8,clean
 lease_6,yes,8/8,clean
 lease_7,yes,8/8,clean
 lease_8,yes,8/8,clean
