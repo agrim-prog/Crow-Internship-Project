@@ -1,0 +1,20 @@
+{
+  "tenant_name": "Bright Toy Store LLC",
+  "property_address": "44 Playdate Ave",
+  "monthly_rent": 1200.0,
+  "lease_start": "2026-06-01",
+  "lease_end": "2029-05-31",
+  "escalation": "Percentage rent of 4% of Gross Sales exceeding $360,000 annually",
+  "cam": "Common area costs included in base rent; Tenant reimburses proportionate share of common area utilities capped at $200/month",
+  "renewal_option": "No renewal or extension option; month-to-month after term with 30 days notice",
+  "key_provisions": [
+    "Gross lease arrangement with CAM included in base rent",
+    "Percentage rent reconciled within 30 days following each Lease Year",
+    "Common area utility reimbursement capped at $200/month"
+  ],
+  "review_flags": {
+    "cam_unclear": false,
+    "renewal_option_unclear": false
+  },
+  "uncertainty_notes": null
+}

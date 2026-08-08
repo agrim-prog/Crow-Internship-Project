@@ -1,0 +1,16 @@
+{
+  "tenant_name": "Bolt Fitness Studio",
+  "property_address": "300 Ironworks Ln",
+  "monthly_rent": 2200.0,
+  "lease_start": "2027-03-01",
+  "lease_end": "2028-02-28",
+  "escalation": null,
+  "cam": null,
+  "renewal_option": null,
+  "key_provisions": [],
+  "review_flags": {
+    "cam_unclear": false,
+    "renewal_option_unclear": false
+  },
+  "uncertainty_notes": null
+}

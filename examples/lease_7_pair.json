@@ -1,0 +1,24 @@
+{
+  "input_text": "THIS LEASE AGREEMENT (the \"Agreement\") is made and entered into this second day of March, two thousand twenty-six, by and between the Landlord and Marbleton Law Group (hereinafter referred to as \"Tenant\"), regarding the real property located at 615 Courthouse Sq (the \"Premises\").\nThe term of this lease shall commence on April 1, 2026, and shall continue for a period of sixty full calendar months, expiring on March 31, 2031. In consideration for the rights of use and occupancy granted under this Agreement, Tenant covenants to pay to the Landlord a monthly base rent in the amount of Six Thousand One Hundred and 00/100 Dollars. Commencing on the first anniversary of the Commencement Date, and on each successive anniversary thereafter, the monthly base rent shall be subject to a fixed escalation adjustment of three percent of the then-current monthly base rent.\nTenant shall be responsible for its proportional share of all Common Area Maintenance expenses incurred by the Landlord, fixed at twelve percent of the total aggregate costs, payable within fifteen days of receipt of an invoice.\nProvided that the Tenant is not in default of any covenants or obligations contained herein, the Tenant shall be granted two successive options to extend the duration of this occupancy: the first for a period of five years, and, if the first option is exercised, a second subsequent option for a period of three years. Written notice for each option must be provided to the Landlord no later than one hundred twenty days prior to the expiration of the then-current term.\n",
+  "model_output": {
+    "tenant_name": "Marbleton Law Group",
+    "property_address": "615 Courthouse Sq",
+    "monthly_rent": 6100.0,
+    "lease_start": "2026-04-01",
+    "lease_end": "2031-03-31",
+    "escalation": "3% annual increase on each anniversary of commencement date",
+    "cam": "Tenant pays 12% proportional share of total CAM expenses, payable within 15 days of invoice",
+    "renewal_option": "Two successive options: first option for 5 years, second option for 3 years (contingent on exercising first option). 120 days written notice required prior to expiration of then-current term. Tenant must not be in default.",
+    "key_provisions": [
+      "Renewal options contingent on tenant not being in default",
+      "CAM expenses invoiced separately from base rent"
+    ],
+    "review_flags": {
+      "cam_unclear": false,
+      "renewal_option_unclear": false
+    },
+    "uncertainty_notes": null
+  },
+  "verified": false,
+  "validation_problems": []
+}

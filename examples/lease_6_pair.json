@@ -1,0 +1,25 @@
+{
+  "input_text": "THIS LEASE AGREEMENT (the \"Agreement\") is made and entered into this ninth day of January, two thousand twenty-seven, by and between the Landlord and Velvet Bakery Co. (hereinafter referred to as \"Tenant\"), regarding the real property located at 22 Flourmill Row (the \"Premises\").\nThe term of this lease shall commence on 01/09/2027, and shall continue for a period of twenty-four full calendar months, expiring on December 31, 2028. In consideration for the rights of use and occupancy granted under this Agreement, Tenant covenants to pay to the Landlord a monthly base rent in the amount of  One  Thousand   Nine Hundred  and 00/100  Dollars  (extra spacing as filed). Said payments shall be remitted in advance on or before the first business day of each calendar month.\nNo escalation clause is included in this instrument; the base rent shall remain fixed for the entirety of the term.\nTenant's obligations with respect to shared building costs are addressed in a separate operating agreement not attached hereto.\nThe Tenant shall have no right to extend or renew this Agreement beyond the stated term absent a new written agreement executed by both parties.\n",
+  "model_output": {
+    "tenant_name": "Velvet Bakery Co.",
+    "property_address": "22 Flourmill Row",
+    "monthly_rent": 1900.0,
+    "lease_start": "2027-01-09",
+    "lease_end": "2028-12-31",
+    "escalation": "No escalation clause; base rent remains fixed for the entire term",
+    "cam": "Addressed in separate operating agreement not attached",
+    "renewal_option": "No renewal or extension right without new written agreement",
+    "key_provisions": [
+      "Rent payable in advance on or before first business day of each month",
+      "24-month term",
+      "Shared building costs governed by separate operating agreement"
+    ],
+    "review_flags": {
+      "cam_unclear": true,
+      "renewal_option_unclear": false
+    },
+    "uncertainty_notes": "CAM obligations are referenced but detailed in a separate operating agreement not included with this lease document. Human review recommended to obtain and review that agreement for complete cost obligations."
+  },
+  "verified": false,
+  "validation_problems": []
+}

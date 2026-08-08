@@ -1,0 +1,20 @@
+{
+  "tenant_name": "Orange Inc.",
+  "property_address": "77 Coolperson Ln",
+  "monthly_rent": 2775.0,
+  "lease_start": null,
+  "lease_end": null,
+  "escalation": "2.5% annual increase on each anniversary of the Commencement Date",
+  "cam": "Tenant responsible for 8% of total Common Area Maintenance expenses, billed pro-rata, payable within 15 days of invoice",
+  "renewal_option": "No renewal option - non-renewable term",
+  "key_provisions": [
+    "Rent payable in advance on or before first business day of each month",
+    "No deduction or set-off permitted",
+    "Tenant must surrender premises in required condition at term end"
+  ],
+  "review_flags": {
+    "cam_unclear": false,
+    "renewal_option_unclear": false
+  },
+  "uncertainty_notes": "Lease term dates are referenced as being in an attached 'Basic Lease Information sheet' which is not included in the provided text. Lease execution date is July 17, 2026, but actual commencement and expiration dates cannot be determined from available information."
+}

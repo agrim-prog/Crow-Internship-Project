@@ -1,0 +1,25 @@
+{
+  "input_text": "THIS LEASE AGREEMENT (the \"Agreement\") is made and entered into this eleventh day of May, two thousand twenty-six, by and between the Landlord and Bright Toy Store LLC (hereinafter referred to as \"Tenant\"), regarding the real property located at 44 Playdate Ave (the \"Premises\").\nThe term of this lease shall commence on June 1, 2026, and shall continue for a period of thirty-six full calendar months, expiring on May 31, 2029. In consideration for the rights of use and occupancy granted under this Agreement, Tenant covenants to pay to the Landlord a monthly minimum base rent in the amount of One Thousand Two Hundred and 00/100 Dollars. In addition to the minimum base rent, Tenant shall pay Landlord percentage rent equal to four percent of Tenant's Gross Sales in excess of Three Hundred Sixty Thousand and 00/100 Dollars annually, reconciled within thirty days following each Lease Year.\nCommon area costs are included within the minimum base rent as a gross lease arrangement, except that Tenant shall separately reimburse Landlord for its proportionate share of common area utilities, capped at Two Hundred and 00/100 Dollars per month.\nTenant shall have no option or right of first refusal to extend or renew this Agreement; any continued occupancy beyond the stated term shall be on a month-to-month basis terminable by either party upon thirty days' written notice.\n",
+  "model_output": {
+    "tenant_name": "Bright Toy Store LLC",
+    "property_address": "44 Playdate Ave",
+    "monthly_rent": 1200.0,
+    "lease_start": "2026-06-01",
+    "lease_end": "2029-05-31",
+    "escalation": "Percentage rent of 4% of Gross Sales exceeding $360,000 annually",
+    "cam": "Common area costs included in base rent; Tenant reimburses proportionate share of common area utilities capped at $200/month",
+    "renewal_option": "No renewal or extension option; month-to-month after term with 30 days notice",
+    "key_provisions": [
+      "Gross lease arrangement with CAM included in base rent",
+      "Percentage rent reconciled within 30 days following each Lease Year",
+      "Common area utility reimbursement capped at $200/month"
+    ],
+    "review_flags": {
+      "cam_unclear": false,
+      "renewal_option_unclear": false
+    },
+    "uncertainty_notes": null
+  },
+  "verified": false,
+  "validation_problems": []
+}

@@ -1,0 +1,25 @@
+{
+  "input_text": "Lease Abstraction 5: \nTHIS LEASE AGREEMENT (the \"Agreement\") is made and entered into this seventeenth day of July, two thousand twenty-six, by and between the Landlord and Apex Tech Lab (hereinafter referred to as \"Tenant\"), regarding the real property located at 909 Innovation Rd (the \"Premises\").\nThe term of this lease shall commence on December 1, 2026, and shall continue for a period of thirty-six full calendar months, expiring on November 30, 2029. In consideration for the rights of use and occupancy granted under this Agreement, Tenant covenants to pay to the Landlord, without notice, demand, deduction, or set-off, a monthly base rent in the amount of Nine Thousand and 00/100 Dollars. Said payments shall be remitted in advance on or before the first business day of each calendar month throughout the duration of the specified term.\nBeginning on December 1, 2027, the monthly base rent shall increase by Five Hundred and 00/100 Dollars ($500.00) per month. Beginning on December 1, 2028, the monthly base rent shall increase by an additional Five Hundred and 00/100 Dollars ($500.00) per month. These adjustments shall remain in effect for the remainder of the lease term.\nIn addition to the base consideration stipulated above, Tenant shall be responsible for its proportional share of all Common Area Maintenance expenses incurred by the Landlord in the operation, management, and repair of the building and its appurtenant grounds. The Tenant\u2019s share of said operating expenses is hereby fixed and established at ten percent of the total aggregate costs as determined by the Landlord\u2019s annual accounting. Such additional rent shall be billed on a pro-rata basis and shall be payable within fifteen days of receipt of an invoice detailing the associated expenditures.\n",
+  "model_output": {
+    "tenant_name": "Apex Tech Lab",
+    "property_address": "909 Innovation Rd",
+    "monthly_rent": 9000.0,
+    "lease_start": "2026-12-01",
+    "lease_end": "2029-11-30",
+    "escalation": "Monthly rent increases by $500.00 on December 1, 2027 (to $9,500.00) and by an additional $500.00 on December 1, 2028 (to $10,000.00)",
+    "cam": "Tenant responsible for 10% of total Common Area Maintenance expenses; billed pro-rata and payable within 15 days of invoice",
+    "renewal_option": null,
+    "key_provisions": [
+      "Rent payable in advance on or before first business day of each month",
+      "Rent payable without notice, demand, deduction, or set-off",
+      "36-month lease term"
+    ],
+    "review_flags": {
+      "cam_unclear": false,
+      "renewal_option_unclear": false
+    },
+    "uncertainty_notes": null
+  },
+  "verified": false,
+  "validation_problems": []
+}

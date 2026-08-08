@@ -1,0 +1,21 @@
+{
+  "tenant_name": "Glow Hair Salon",
+  "property_address": "12 Beauty Blvd",
+  "monthly_rent": 2800.0,
+  "lease_start": "2027-01-01",
+  "lease_end": "2030-12-31",
+  "escalation": "5% annual increase on each anniversary of the Commencement Date",
+  "cam": "Tenant responsible for proportional share of operational, management, and maintenance expenses; payable within 15 days of invoice",
+  "renewal_option": "One option to extend for 2 years; requires written notice 180 days prior to expiration",
+  "key_provisions": [
+    "Rent payable in advance on or before first business day of each month",
+    "No deduction or set-off permitted for rent payments",
+    "Extension option lapses if not exercised timely",
+    "Tenant must not be in default to exercise renewal option"
+  ],
+  "review_flags": {
+    "cam_unclear": false,
+    "renewal_option_unclear": false
+  },
+  "uncertainty_notes": null
+}

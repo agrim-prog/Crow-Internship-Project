@@ -1,0 +1,25 @@
+{
+  "input_text": "Lease Abstraction 1:\nTHIS LEASE AGREEMENT (the \"Agreement\") is made and entered into this seventeenth day of July, two thousand twenty-six, by and between the Landlord and Orange Inc. (hereinafter referred to as \"Tenant\"), regarding the real property located at 77 Coolperson Ln (the \"Premises\").\nThe Tenant shall be responsible for its proportional share of all Common Area Maintenance expenses incurred by the Landlord in the operation, management, and repair of the building and its appurtenant grounds. The Tenant\u2019s share of said operating expenses is hereby fixed and established at eight percent of the total aggregate costs as determined by the Landlord\u2019s annual accounting. Such additional rent shall be billed on a pro-rata basis and shall be payable within fifteen days of receipt of an invoice detailing the associated expenditures. Furthermore, on each successive anniversary of the Commencement Date, the monthly base rent shall be subject to a fixed escalation adjustment. Specifically, the rent shall be increased by an amount equal to two and one-half percent of the then-current monthly base rent. This adjusted figure shall thereafter constitute the base rent for the subsequent twelve-month period.\nIn consideration for the rights of use and occupancy granted under this Agreement, Tenant covenants to pay to the Landlord, without notice, demand, deduction, or set-off, a monthly base rent in the amount of Two Thousand Seven Hundred Seventy-Five and 00/100 Dollars. Said payments shall be remitted in advance on or before the first business day of each calendar month. The term is as set forth in the Basic Lease Information sheet attached hitherto. The parties acknowledge and agree that this instrument constitutes a non-renewable term; upon the expiration of the final day of the term, the Tenant shall surrender possession of the Premises in the condition required by the standard maintenance provisions, and no option or right of first refusal to extend or renew said term is granted, implied, or otherwise conferred herein.\n",
+  "model_output": {
+    "tenant_name": "Orange Inc.",
+    "property_address": "77 Coolperson Ln",
+    "monthly_rent": 2775.0,
+    "lease_start": null,
+    "lease_end": null,
+    "escalation": "2.5% annual increase on each anniversary of the Commencement Date",
+    "cam": "Tenant responsible for 8% of total Common Area Maintenance expenses, billed pro-rata, payable within 15 days of invoice",
+    "renewal_option": "No renewal option - non-renewable term",
+    "key_provisions": [
+      "Rent payable in advance on or before first business day of each month",
+      "No deduction or set-off permitted",
+      "Tenant must surrender premises in required condition at term end"
+    ],
+    "review_flags": {
+      "cam_unclear": false,
+      "renewal_option_unclear": false
+    },
+    "uncertainty_notes": "Lease term dates are referenced as being in an attached 'Basic Lease Information sheet' which is not included in the provided text. Lease execution date is July 17, 2026, but actual commencement and expiration dates cannot be determined from available information."
+  },
+  "verified": false,
+  "validation_problems": []
+}

@@ -1,0 +1,26 @@
+{
+  "input_text": "Lease Abstraction 2: \nTHIS LEASE AGREEMENT (the \"Agreement\") is made and entered into this seventeenth day of July, two thousand twenty-six, by and between the Landlord and Star Donuts LLC (hereinafter referred to as \"Tenant\"), regarding the real property located at 104 Donut Circle (the \"Premises\").\nThe term of this lease shall commence on October 1, 2026, and shall continue for a period of thirty-six full calendar months, expiring on September 30, 2029. The parties acknowledge and agree that this instrument constitutes a non-renewable term; upon the expiration of the final day of the term, the Tenant shall surrender possession of the Premises in the condition required by the standard maintenance provisions, and no option or right of first refusal to extend or renew said term is granted, implied, or otherwise conferred herein.\nIn consideration for the rights of use and occupancy granted under this Agreement, Tenant covenants to pay to the Landlord, without notice, demand, deduction, or set-off, a monthly base rent in the amount of Three Thousand Five Hundred and 00/100 Dollars. Said payments shall be remitted in advance on or before the first business day of each calendar month. Commencing on the first anniversary of the Commencement Date, and on each successive anniversary thereafter throughout the duration of this Agreement, the monthly base rent shall be subject to a fixed escalation adjustment. Specifically, the rent shall be increased by an amount equal to five percent of the then-current monthly base rent. This adjusted figure shall thereafter constitute the base rent for the subsequent twelve-month period.\nIn addition to the base consideration stipulated above, Tenant shall be responsible for its proportional share of all Common Area Maintenance expenses incurred by the Landlord in the operation, management, and repair of the building and its appurtenant grounds. The Tenant\u2019s share of said operating expenses is hereby fixed and established at ten percent of the total aggregate costs as determined by the Landlord\u2019s annual accounting. Such additional rent shall be billed on a pro-rata basis and shall be payable within fifteen days of receipt of an invoice detailing the associated expenditures.\n",
+  "model_output": {
+    "tenant_name": "Star Donuts LLC",
+    "property_address": "104 Donut Circle",
+    "monthly_rent": 3500.0,
+    "lease_start": "2026-10-01",
+    "lease_end": "2029-09-30",
+    "escalation": "5% annual increase on each anniversary of the Commencement Date",
+    "cam": "Tenant responsible for 10% of total Common Area Maintenance expenses, billed pro-rata, payable within 15 days of invoice",
+    "renewal_option": "None - lease explicitly states non-renewable term with no extension or renewal rights",
+    "key_provisions": [
+      "36-month non-renewable term",
+      "Rent payable in advance on or before first business day of each month",
+      "No deduction or set-off permitted for rent payments",
+      "Tenant must surrender premises in required condition at lease end"
+    ],
+    "review_flags": {
+      "cam_unclear": false,
+      "renewal_option_unclear": false
+    },
+    "uncertainty_notes": null
+  },
+  "verified": false,
+  "validation_problems": []
+}

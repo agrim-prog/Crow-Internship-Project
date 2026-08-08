@@ -1,0 +1,21 @@
+{
+  "tenant_name": "Star Donuts LLC",
+  "property_address": "104 Donut Circle",
+  "monthly_rent": 3500.0,
+  "lease_start": "2026-10-01",
+  "lease_end": "2029-09-30",
+  "escalation": "5% annual increase on each anniversary of the Commencement Date",
+  "cam": "Tenant responsible for 10% of total Common Area Maintenance expenses, billed pro-rata, payable within 15 days of invoice",
+  "renewal_option": "None - lease explicitly states non-renewable term with no extension or renewal rights",
+  "key_provisions": [
+    "36-month non-renewable term",
+    "Rent payable in advance on or before first business day of each month",
+    "No deduction or set-off permitted for rent payments",
+    "Tenant must surrender premises in required condition at lease end"
+  ],
+  "review_flags": {
+    "cam_unclear": false,
+    "renewal_option_unclear": false
+  },
+  "uncertainty_notes": null
+}
