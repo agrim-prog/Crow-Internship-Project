@@ -5,3 +5,5 @@ __pycache__/
 .gstack/
 .gstack/
 .gstack/
+.remember/
+.gstack/
