@@ -87,6 +87,40 @@ code: `git pull origin main`, then confirm `code/app.py` exists.
 that browser tab, or start on another port:
 `streamlit run code/app.py --server.port 8502`.
 
+## Deploying it (so nobody has to run it locally)
+
+The app is hosted on [Streamlit Community Cloud](https://share.streamlit.io),
+which is free and runs straight off this repo. Note that it will **not**
+deploy to Vercel — Streamlit needs a persistent server holding an open
+WebSocket per user, and Vercel only runs short-lived serverless functions.
+
+To deploy or redeploy:
+
+1. Go to https://share.streamlit.io and sign in with GitHub. Because this
+   repo is private, grant Streamlit private-repo access under
+   *Settings → Linked accounts*.
+2. Click **Create app → Deploy a public app from GitHub** and fill in:
+   - Repository: `agrim-prog/Crow-Internship-Project`
+   - Branch: `main`
+   - Main file path: `code/app.py`
+3. Open **Advanced settings** and paste this into the Secrets box, in TOML:
+   ```toml
+   ANTHROPIC_API_KEY = "the-key-here"
+   ```
+   It has to be a root-level key like that. Streamlit only exposes
+   root-level secrets as environment variables, and that's what the
+   pipeline reads. Nesting it under a `[section]` will break the app.
+4. Deploy. Every push to `main` redeploys automatically.
+
+Two things worth knowing:
+
+- **You need admin access on the repo to deploy it.** Pushing isn't
+  enough. If GitHub doesn't list the repo, ask the repo owner to either
+  deploy it from their account or give you admin.
+- The deployed app runs on whatever key you paste into Secrets, and
+  anyone with the URL can spend it. Keep the app private in
+  *Settings → Sharing* if that's a concern.
+
 ## Rules
 
 - The API key is never committed to this repo. It lives only in each
