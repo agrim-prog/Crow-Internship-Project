@@ -5,6 +5,6 @@
   "lease_start": "2026-09-01",
   "lease_end": "2031-08-31",
   "escalation": "Stepped: +$300/month starting on the 2nd anniversary, +$300/month more on each anniversary after that (fixed dollar steps, not a percentage)",
-  "cam": "Vague - Landlord determines amount 'from time to time,' no fixed percentage or dollar figure stated",
-  "renewal_option": "One 5-year option, notice required at a 'commercially reasonable time' before expiration (vague timing, not a specific day count)"
+  "cam": "Tenant contributes toward shared building costs, amount determined by Landlord from time to time, consistent with comparable properties - no fixed percentage or dollar figure given",
+"renewal_option": "One 5-year option, written notice required at a commercially reasonable time before expiration - no specific day count given",
 }
