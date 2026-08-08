@@ -121,11 +121,23 @@ Two things worth knowing:
 - The deployed app runs on whatever key you paste into Secrets, and
   anyone with the URL can spend it. Keep the app private in
   *Settings → Sharing* if that's a concern.
-- **Don't unpin `requirements.txt`.** The whole custom UI is CSS layered
-  over Streamlit's own DOM, so a newer Streamlit release can move the
-  elements it targets and break the layout. The pinned version is the one
-  the design was built and tested against. If you bump it, run the app
-  locally and actually look at it before pushing.
+- **Don't unpin `requirements.txt`.** Two separate things break if you do.
+  The custom UI is CSS layered over Streamlit's own DOM, so a newer release
+  can move the elements it targets and break the layout. And the scroll
+  progress bar uses `components.html`, which Streamlit has already marked
+  for removal past a date that has now passed — a newer release can delete
+  it outright. See the note above that call in `code/app.py` for the
+  migration path. If you do bump Streamlit, run the app locally and
+  actually look at it before pushing.
+
+### Verified working
+
+This exact commit was tested the way Community Cloud runs it: a fresh
+clone from GitHub, Python 3.12, a clean venv built only from
+`requirements.txt`, no `.env.local`, and the key supplied only as an
+environment variable the way Cloud injects secrets. The app booted with no
+errors, the full design rendered, and a real abstraction of
+`data/lease_1.txt` returned correct values end to end.
 
 ## Rules
 

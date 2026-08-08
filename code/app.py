@@ -529,6 +529,17 @@ st.markdown("""
 
 # st.markdown strips <script>, so the scroll-progress bar is installed from a
 # zero-height component iframe, which is same-origin and can reach the parent page.
+#
+# NOTE: Streamlit prints a deprecation notice for components.html on every run
+# and lists a removal date that has already passed, so a future release will
+# take this away. That's the main reason streamlit is pinned in
+# requirements.txt - unpinning it can delete this call and the progress bar
+# with it. The suggested replacement, st.iframe, is NOT a drop-in: it takes a
+# src URL, not an HTML string. The real migration is
+# st.html(..., unsafe_allow_javascript=True), but st.html isn't iframed and
+# runs the markup through DOMPurify, so it needs testing rather than a
+# find-and-replace. window.parent below keeps working either way, since
+# window.parent === window at the top level.
 components.html("""
 <script>
 (function () {
