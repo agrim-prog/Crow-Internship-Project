@@ -57,6 +57,8 @@ with col_result:
                     value = result.get(key)
                     flag_name = f"{key}_unclear"
                     is_flagged = flags.get(flag_name, False)
+                    if key in ("lease_start", "lease_end"):
+                        is_flagged = is_flagged or flags.get("date_conflict", False)
 
                     c1, c2 = st.columns([1, 2])
                     with c1:

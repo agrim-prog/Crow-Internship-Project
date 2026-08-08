@@ -23,6 +23,7 @@ LEASE_ABSTRACT_SCHEMA = {
     "review_flags": {
         "cam_unclear": "boolean",
         "renewal_option_unclear": "boolean",
+        "date_conflict": "boolean",
     },
     "uncertainty_notes": "string or null - anything ambiguous a human should check",
 }
@@ -62,8 +63,13 @@ Missing vs unclear are DIFFERENT states and must not be collapsed:
 - A field that IS present but worded so vaguely you are not confident ->
   give your best reading AND set its review flag true.
 
-Never invent a value. Never infer one from an unrelated clause."""
+Date conflicts: if the document states two different values for the same
+date (e.g. two different expiration dates in different sections), do NOT
+silently pick one. Set lease_start and/or lease_end to null (whichever is
+contradicted), set review_flags.date_conflict to true, and explain the
+exact conflict — quoting or citing both sections — in uncertainty_notes.
 
+Never invent a value. Never infer one from an unrelated clause."""
 
 def build_prompt(raw_lease_text: str) -> str:
     return (
@@ -102,9 +108,10 @@ def validate(parsed: dict) -> list:
                 problems.append(f"{date_field}: expected YYYY-MM-DD, got {value!r}")
 
     # Both review flags need to be there and actually booleans.
+    # All review flags need to be there and actually booleans.
     flags = parsed.get("review_flags")
     if isinstance(flags, dict):
-        for flag in ("cam_unclear", "renewal_option_unclear"):
+        for flag in ("cam_unclear", "renewal_option_unclear", "date_conflict"):
             if flag not in flags:
                 problems.append(f"review_flags missing: {flag}")
             elif not isinstance(flags[flag], bool):
