@@ -15,6 +15,7 @@ st.set_page_config(page_title="Crow Lease Abstractor", page_icon="\U0001F4C4")
 
 st.title("Crow Lease Abstractor")
 st.caption("Paste or upload a commercial lease and get its key terms back as a clean summary.")
+st.caption("When uncertain, this tool flags fields for human review rather than guessing — even at the cost of occasional over-caution.")
 
 if not os.environ.get("ANTHROPIC_API_KEY"):
     st.warning("ANTHROPIC_API_KEY is not set. Set it in your terminal before running this app.")

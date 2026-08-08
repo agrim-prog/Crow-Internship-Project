@@ -1,0 +1,20 @@
+{
+  "tenant_name": "Summit Wellness Partners Inc.",
+  "property_address": "812 Ridgeline Dr, Suite 2",
+  "monthly_rent": 5100.0,
+  "lease_start": "2025-02-01",
+  "lease_end": "2031-01-31",
+  "escalation": "4% annual increase on each anniversary of commencement date",
+  "cam": "12% of total aggregate Common Area Maintenance costs, payable within 15 days of invoice",
+  "renewal_option": "One 3-year extension option, requires 120 days written notice prior to lease expiration, tenant must not be in default",
+  "key_provisions": [
+    "Assignment from Palmetto Fitness Group LLC to Summit Wellness Partners Inc. effective June 1, 2027",
+    "Original Tenant released from liability as of assignment effective date"
+  ],
+  "review_flags": {
+    "cam_unclear": false,
+    "renewal_option_unclear": false,
+    "date_conflict": false
+  },
+  "uncertainty_notes": null
+}

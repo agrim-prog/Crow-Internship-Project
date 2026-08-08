@@ -1,0 +1,20 @@
+{
+  "tenant_name": "Coastal Design Studio LLC",
+  "property_address": "77 Harbor View Terrace, Suite 5",
+  "monthly_rent": 3500.0,
+  "lease_start": "2026-10-01",
+  "lease_end": "2029-09-30",
+  "escalation": "No escalation of Annual Base Rent during the initial Term",
+  "cam": "Tenant reimburses 9% of total aggregate Common Area Maintenance costs, payable within 15 days of invoice",
+  "renewal_option": "No option or right of first refusal to extend or renew",
+  "key_provisions": [
+    "Monthly rent payable in advance on or before first business day of each month",
+    "36-month term"
+  ],
+  "review_flags": {
+    "cam_unclear": false,
+    "renewal_option_unclear": false,
+    "date_conflict": false
+  },
+  "uncertainty_notes": null
+}

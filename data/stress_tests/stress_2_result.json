@@ -1,0 +1,19 @@
+{
+  "tenant_name": "Northbrook Family Dentistry",
+  "property_address": "305 Willowbrook Ave, Suite 110",
+  "monthly_rent": 4400.0,
+  "lease_start": "2026-03-01",
+  "lease_end": null,
+  "escalation": "3% annual increase on each anniversary of the Commencement Date",
+  "cam": "Tenant pays 10% of total aggregate Common Area Maintenance costs, payable within 15 days of invoice",
+  "renewal_option": "One 5-year extension option, exercisable with written notice at least 150 days prior to Term expiration, provided Tenant is not in default",
+  "key_provisions": [
+    "Rent payable in advance on or before first business day of each month"
+  ],
+  "review_flags": {
+    "cam_unclear": false,
+    "renewal_option_unclear": false,
+    "date_conflict": true
+  },
+  "uncertainty_notes": "CRITICAL CONFLICT: Section 2.1 states the 60-month term expires February 28, 2031, but Section 9.4 states expiration is February 28, 2030. These dates are inconsistent and require human review to determine the correct lease end date."
+}
