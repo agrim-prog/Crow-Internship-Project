@@ -120,26 +120,36 @@ def validate(parsed: dict) -> list:
     return problems
 
 
-def call_and_parse_pipeline(raw_lease_text: str):
+def call_and_parse_pipeline(raw_lease_text: str, on_first_token=None):
     """
     Give it raw lease text, get back (parsed_dict, problems).
 
     parsed_dict comes back None only when we couldn't parse the response at all.
     That's a different thing from a lease where every field just happens to be blank.
+
+    on_first_token, if given, is called once when the first token of the reply
+    lands. The request is streamed so that boundary exists at all: everything
+    before it is the model reading the lease, everything after is it writing the
+    abstract. The UI draws its two progress phases from that split.
     """
     try:
-        response = client.messages.create(
+        chunks = []
+        with client.messages.stream(
             model=MODEL,
             max_tokens=2000,
             temperature=0,
             system=SYSTEM_PROMPT,
             messages=[{"role": "user", "content": build_prompt(raw_lease_text)}],
-        )
+        ) as stream:
+            for text in stream.text_stream:
+                if not chunks and on_first_token is not None:
+                    on_first_token()
+                chunks.append(text)
     except Exception as e:
         print(f"[Error] API call failed: {e}")
         return None, [f"API call failed: {e}"]
 
-    raw_output = response.content[0].text
+    raw_output = "".join(chunks)
 
     # Models sometimes wrap the JSON in chatter, so just grab everything
     # between the first { and the last }.
