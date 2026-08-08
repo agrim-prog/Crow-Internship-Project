@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/* Tokens pulled directly from usecrow.ai's shipped CSS (hsl values below are
+   copied from their :root block) — single light theme, zero border radius,
+   Inter, emerald accent. This is a deliberate match to an existing brand,
+   not a themeable design system, so there is no dark-mode branch. */
+:root {
+  --background: #ffffff;
+  --foreground: #0d0d0d;
+  --card: #fafafa;
+  --card-foreground: #0d0d0d;
+  --muted: #f0f0f0;
+  --muted-foreground: #595959;
+  --border: #e0e0e0;
+  --primary: #10b77f;
+  --primary-foreground: #ffffff;
+  --destructive: #ef3f3f;
+  --destructive-soft: #fdeaea;
+  --shadow-color: 0 0 0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-soft: var(--destructive-soft);
+
+  --font-sans: var(--font-inter);
+  --radius-none: 0px;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  background: var(--background);
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #111 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
