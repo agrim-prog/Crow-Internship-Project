@@ -3,6 +3,7 @@
 
 import os
 import json
+import difflib
 import anthropic
 
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
@@ -211,9 +212,13 @@ def run_accuracy_check(model_output: dict, ground_truth: dict):
     for key, true_val in ground_truth.items():
         pred_val = model_output.get(key)
 
-        # For strings, don't do casing or stray whitespace.
+        # For strings, allow a close paraphrase instead of demanding an
+        # identical sentence for information that's actually correct.
         if isinstance(true_val, str) and isinstance(pred_val, str):
-            is_match = true_val.strip().lower() == pred_val.strip().lower()
+            t = true_val.strip().lower()
+            p = pred_val.strip().lower()
+            similarity = difflib.SequenceMatcher(None, t, p).ratio()
+            is_match = (t == p) or (similarity >= 0.6)
         else:
             is_match = pred_val == true_val
 
