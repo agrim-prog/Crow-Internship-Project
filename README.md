@@ -103,7 +103,8 @@ To deploy or redeploy:
    - Repository: `agrim-prog/Crow-Internship-Project`
    - Branch: `main`
    - Main file path: `code/app.py`
-3. Open **Advanced settings** and paste this into the Secrets box, in TOML:
+3. Open **Advanced settings** and leave the Python version on **3.12**
+   (the default). Then paste this into the Secrets box, in TOML:
    ```toml
    ANTHROPIC_API_KEY = "the-key-here"
    ```
@@ -120,6 +121,11 @@ Two things worth knowing:
 - The deployed app runs on whatever key you paste into Secrets, and
   anyone with the URL can spend it. Keep the app private in
   *Settings → Sharing* if that's a concern.
+- **Don't unpin `requirements.txt`.** The whole custom UI is CSS layered
+  over Streamlit's own DOM, so a newer Streamlit release can move the
+  elements it targets and break the layout. The pinned version is the one
+  the design was built and tested against. If you bump it, run the app
+  locally and actually look at it before pushing.
 
 ## Rules
 
