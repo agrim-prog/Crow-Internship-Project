@@ -39,3 +39,16 @@ team doesn't have to read the whole document by hand.
 - The API key is never committed to this repo. It lives only in each
   person's local environment variable.
 - Never use real tenant, owner, or financial data — sample/fictional data only.
+
+## Known Limitations
+
+- **Date conflict detection can be overcautious.** The tool flags any lease
+  with two different dates mentioned for the same term, even when one date
+  is clearly a resolved estimate and the other is an explicit legal
+  override (e.g., "the date shall be deemed X, regardless of..."). In
+  testing, this caused a correct, resolvable date to be flagged as
+  uncertain rather than computed. We chose not to fix this: for a tool
+  handling real lease obligations, a false "needs review" is a much safer
+  failure than a false confident answer. A human spending 30 extra seconds
+  confirming a date they'd have confirmed anyway costs far less than the
+  tool silently guessing wrong on a genuine conflict.
