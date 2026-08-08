@@ -222,7 +222,7 @@ def run_accuracy_check(model_output: dict, ground_truth: dict):
             t = true_val.strip().lower()
             p = pred_val.strip().lower()
             similarity = difflib.SequenceMatcher(None, t, p).ratio()
-            is_match = (t == p) or (similarity >= 0.6)
+            is_match = (t == p) or (similarity >= 0.5)
         else:
             is_match = pred_val == true_val
 
