@@ -4,7 +4,7 @@
   "monthly_rent": 9000.00,
   "lease_start": "2026-12-01",
   "lease_end": "2029-11-30",
-  "escalation": "Stepped: +$500/month starting Dec 1 2027, +$500/month more starting Dec 1 2028 (fixed dollar steps, not a percentage)",
+  "escalation": "Monthly rent increases by $500.00 on December 1, 2027, and by an additional $500.00 on December 1, 2028",
   "cam": "10% of total aggregate costs, payable within 15 days of invoice",
   "renewal_option": null
 }
