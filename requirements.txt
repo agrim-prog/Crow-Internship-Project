@@ -1,0 +1,8 @@
+# Pinned on purpose. The UI in code/app.py styles Streamlit's own DOM via
+# selectors like .stApp and [data-testid="stMain"]. Those aren't a stable
+# public API, so a newer Streamlit can move them and quietly break the
+# layout. Test locally before bumping this.
+streamlit==1.61.1
+
+anthropic==0.121.0
+python-dotenv==1.2.2
