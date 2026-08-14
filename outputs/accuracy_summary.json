@@ -1,0 +1,27 @@
+{
+  "overall_pct": 100.0,
+  "total_correct": 80,
+  "total_fields": 80,
+  "per_lease": {
+    "lease_10": "8/8",
+    "lease_1": "8/8",
+    "lease_2": "8/8",
+    "lease_3": "8/8",
+    "lease_4": "8/8",
+    "lease_5": "8/8",
+    "lease_6": "8/8",
+    "lease_7": "8/8",
+    "lease_8": "8/8",
+    "lease_9": "8/8"
+  },
+  "per_field_pct": {
+    "tenant_name": 100.0,
+    "property_address": 100.0,
+    "monthly_rent": 100.0,
+    "lease_start": 100.0,
+    "lease_end": 100.0,
+    "escalation": 100.0,
+    "cam": 100.0,
+    "renewal_option": 100.0
+  }
+}

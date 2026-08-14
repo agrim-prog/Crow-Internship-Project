@@ -53,15 +53,25 @@ Return ONLY valid JSON matching the schema. No other text, no markdown fences, n
 Field rules:
 - monthly_rent: a NUMBER, not a string. Amounts may be written in words
   ("Two Thousand Seven Hundred Seventy-Five and 00/100 Dollars") - convert to 2775.00.
-- lease_start / lease_end: format YYYY-MM-DD. If the lease refers to a term set out
-  in an attachment or schedule not included in the text, return null.
-  Do NOT calculate or infer dates from a stated duration.
+- lease_start / lease_end: format YYYY-MM-DD. If the lease states an explicit
+  calendar date (e.g. "expiring on December 31, 2028"), extract that date even
+  if a duration is also mentioned in the same sentence ("a term of twenty-four
+  months, expiring on December 31, 2028" -> the stated date, not a calculation).
+  Only return null when no explicit date is given at all - just a bare duration
+  with nothing to read a date from, or a term set out in an attachment or
+  schedule not included in the text. Do NOT calculate or infer a date yourself
+  from a stated duration when no explicit date is given.
 - key_provisions: an array of short strings. Empty array if none stand out.
 
 Missing vs unclear are DIFFERENT states and must not be collapsed:
 - A field genuinely not stated anywhere -> null, and leave its review flag false.
 - A field that IS present but worded so vaguely you are not confident ->
   give your best reading AND set its review flag true.
+- A field the lease acknowledges but defers to a separate attachment, exhibit,
+  or operating agreement not included in the text -> that deferral IS the
+  answer. Capture it as the value (e.g. "Addressed in a separate operating
+  agreement not attached") rather than returning null - null means the lease
+  never brings the topic up at all, not that the details live elsewhere.
 
 Date conflicts: if the document states two different values for the same
 date (e.g. two different expiration dates in different sections), do NOT
